@@ -14,7 +14,7 @@ export const Footer = () => {
             <div className="flex items-center gap-3 mb-6">
               <img src={logo} alt="BridgeOne.Com" className="h-12 w-auto" />
               <span className="text-xl font-heading font-bold">
-                Bridge<span className="text-accent">One</span>SA.Com
+                Bridge<span className="text-accent">One</span>.Com
               </span>
             </div>
             <p className="text-sm text-white/40 leading-relaxed">
@@ -87,7 +87,7 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={16} className="shrink-0 text-accent" />
-                <span>info@bridgeonedot.com</span>
+                <span>info@bridgeone.com</span>
               </div>
             </div>
           </div>
