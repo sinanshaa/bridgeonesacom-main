@@ -68,7 +68,7 @@ export const HeroSlider = ({ onConsultation }: HeroSliderProps) => {
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-10 flex h-auto items-end pb-24 md:items-center md:pb-0 mt-10">
+      <div className="relative z-10 flex h-autoitems-end pb-24 md:items-center md:pb-0 mt-10">
         <div className="container-narrow w-full">
           <AnimatePresence mode="wait">
             <motion.div

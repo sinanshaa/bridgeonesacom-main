@@ -67,42 +67,6 @@ const Index = () => {
           </div> */}
         </div>
       </section>
-
-      <section className="section-padding bg-gradient-to-br from-primary via-secondary to-primary text-white relative overflow-hidden">
-        <div className="absolute inset-0 tech-grid opacity-10" />
-        <div className="container-narrow relative">
-          <FadeIn>
-            <div className="text-center max-w-2xl mx-auto">
-              <span className="text-sm font-medium text-accent uppercase tracking-widest">Our Process</span>
-              <h2 className="mt-3 text-3xl font-heading font-bold md:text-5xl">How It Works</h2>
-              <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-accent" />
-              <p className="mt-4 text-white/50">A simple 4-step journey to your Saudi business</p>
-            </div>
-          </FadeIn>
-          <div className="mt-16 grid gap-8 md:grid-cols-4">
-            {[
-              { num: "01", title: "Free Consultation", desc: "Discuss your goals and get expert advice." },
-              { num: "02", title: "Document Preparation", desc: "We handle all paperwork and filings." },
-              { num: "03", title: "Government Processing", desc: "Approvals, licenses, and registrations." },
-              { num: "04", title: "Business Launch", desc: "Start operating with ongoing support." },
-            ].map((step, i) => (
-              <FadeIn key={step.num} delay={i * 120}>
-                <div className="group text-center relative">
-                  {i < 3 && (
-                    <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-gradient-to-r from-accent/30 to-transparent" />
-                  )}
-                  <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-accent text-accent-foreground font-heading font-bold text-lg shadow-lg shadow-accent/30 transition-all duration-300 group-hover:shadow-accent/50 group-hover:scale-110">
-                    {step.num}
-                  </div>
-                  <h3 className="font-heading font-semibold text-lg">{step.title}</h3>
-                  <p className="mt-2 text-sm text-white/50">{step.desc}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* About */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
@@ -111,7 +75,7 @@ const Index = () => {
               <div>
                 <span className="text-sm font-medium text-accent uppercase tracking-widest">Who We Are</span>
                 <h2 className="mt-3 text-3xl font-heading font-bold text-primary md:text-5xl leading-tight">
-                  About BridgeOneSA
+                  About BridgeOne
                 </h2>
                 <div className="mt-4 h-1 w-16 rounded-full bg-accent" />
                 <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -147,19 +111,28 @@ const Index = () => {
                 </Button>
               </div>
             </FadeIn>
-            <FadeIn delay={200}>
+            <FadeIn className="backgroundImage rounded-2xl">
               <div className="relative">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                  <div className="h-full w-full bg-gradient-to-br from-primary via-secondary to-primary flex items-center justify-center relative">
-                    <div className="absolute inset-0 tech-grid opacity-30" />
-                    <div className="text-center relative z-10 flex flex-col items-center gap-4">
-                      <img src={logo} alt="BridgeOne" className="h-24 w-auto" />
-                      <div className="text-white/60 text-sm font-medium tracking-widest uppercase">Bridging Global Services</div>
-                    </div>
+
+                {/* Main Image Container */}
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden ">
+
+                  <div
+                    className="h-full w-full flex items-center justify-center relative bg-cover bg-center"
+                  >
+
+                    {/* Dark overlay (optional but recommended for visibility) */}
+                    
+
+                    {/* Content */}
+
                   </div>
                 </div>
-                <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-xl bg-accent/20 blur-2xl" />
-                <div className="absolute -top-4 -left-4 h-32 w-32 rounded-xl bg-secondary/30 blur-3xl" />
+
+                {/* Decorative blur effects */}
+                <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-xl bg-accent/20 blur-2xl"></div>
+                <div className="absolute -top-4 -left-4 h-32 w-32 rounded-xl bg-secondary/30 blur-3xl"></div>
+
               </div>
             </FadeIn>
           </div>
@@ -206,13 +179,48 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="section-padding bg-gradient-to-br from-primary via-secondary to-primary text-white relative overflow-hidden">
+        <div className="absolute inset-0 tech-grid opacity-10" />
+        <div className="container-narrow relative">
+          <FadeIn>
+            <div className="text-center max-w-2xl mx-auto">
+              <span className="text-sm font-medium text-accent uppercase tracking-widest">Our Process</span>
+              <h2 className="mt-3 text-3xl font-heading font-bold md:text-5xl">How It Works</h2>
+              <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-accent" />
+              <p className="mt-4 text-white/50">A simple 4-step journey to your Saudi business</p>
+            </div>
+          </FadeIn>
+          <div className="mt-16 grid gap-8 md:grid-cols-4">
+            {[
+              { num: "01", title: "Free Consultation", desc: "Discuss your goals and get expert advice." },
+              { num: "02", title: "Document Preparation", desc: "We handle all paperwork and filings." },
+              { num: "03", title: "Government Processing", desc: "Approvals, licenses, and registrations." },
+              { num: "04", title: "Business Launch", desc: "Start operating with ongoing support." },
+            ].map((step, i) => (
+              <FadeIn key={step.num} delay={i * 120}>
+                <div className="group text-center relative">
+                  {i < 3 && (
+                    <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-gradient-to-r from-accent/30 to-transparent" />
+                  )}
+                  <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-accent text-accent-foreground font-heading font-bold text-lg shadow-lg shadow-accent/30 transition-all duration-300 group-hover:shadow-accent/50 group-hover:scale-110">
+                    {step.num}
+                  </div>
+                  <h3 className="font-heading font-semibold text-lg">{step.title}</h3>
+                  <p className="mt-2 text-sm text-white/50">{step.desc}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <FadeIn>
             <div className="text-center max-w-2xl mx-auto">
               <span className="text-sm font-medium text-accent uppercase tracking-widest">Why Us</span>
-              <h2 className="mt-3 text-3xl font-heading font-bold text-primary md:text-5xl">Why Choose BridgeOneSA</h2>
+              <h2 className="mt-3 text-3xl font-heading font-bold text-primary md:text-5xl">Why Choose BridgeOne</h2>
               <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-accent" />
               <p className="mt-4 text-muted-foreground">What sets us apart in business consulting</p>
             </div>

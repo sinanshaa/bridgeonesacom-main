@@ -12,7 +12,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <img src={logo} alt="BridgeOneSA.Com" className="h-12 w-auto" />
+              <img src={logo} alt="BridgeOne.Com" className="h-12 w-auto" />
               <span className="text-xl font-heading font-bold">
                 Bridge<span className="text-accent">One</span>SA.Com
               </span>
@@ -96,7 +96,7 @@ export const Footer = () => {
 
       <div className="border-t border-white/5">
         <div className="container-narrow py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/30">
-          <span>© {new Date().getFullYear()} BridgeOneSA.Com — All rights reserved.</span>
+          <span>© {new Date().getFullYear()} BridgeOne.Com — All rights reserved.</span>
           <span>Trusted Business Partner in Saudi Arabia, UAE & India</span>
         </div>
       </div>

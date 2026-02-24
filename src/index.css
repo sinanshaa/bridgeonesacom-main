@@ -89,7 +89,12 @@
     @apply bg-background text-foreground font-body antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading;
   }
 }
@@ -112,7 +117,7 @@
   }
 
   .tech-grid {
-    background-image: 
+    background-image:
       linear-gradient(hsl(220 60% 35% / 0.06) 1px, transparent 1px),
       linear-gradient(90deg, hsl(220 60% 35% / 0.06) 1px, transparent 1px);
     background-size: 80px 80px;
@@ -132,13 +137,28 @@ html {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: hsl(0 0% 96%);
 }
+
 ::-webkit-scrollbar-thumb {
   background: hsl(210 20% 80%);
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(210 20% 65%);
+}
+
+.backgroundImage {
+  background-image: url("../public/Backgroundimage.png");
+  background-size: cover;
+  /* Full screen */
+  background-position: center;
+  /* Center image */
+  background-repeat: no-repeat;
+  /* No repeat */
+  height: 100vh;
+  margin: 0;
 }
