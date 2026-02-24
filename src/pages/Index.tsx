@@ -40,7 +40,7 @@ const testimonials = [
 
 const highlights = [
   { label: "Reliable & Transparent Service" },
-  { label: "Expert Guidance for Saudi Business Setup" },
+  { label: "Expert Saudi Business Setup" },
   { label: "Fast & Hassle-Free Processing" },
   { label: "Dedicated Client Support" },
 ];
@@ -53,9 +53,9 @@ const Index = () => {
       <HeroSlider onConsultation={() => setDialogOpen(true)} />
 
       {/* Credibility Bar */}
-      <section className="relative z-10 -mt-16">
+      <section className=" -mt-16">
         <div className="container-narrow">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden shadow-2xl shadow-black/10">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden shadow-2xl shadow-black/10">
             {highlights.map((item, i) => (
               <FadeIn key={item.label} delay={i * 100}>
                 <div className="bg-primary/95 backdrop-blur-xl p-6 md:p-8 text-center border-r border-white/5 last:border-r-0 flex flex-col items-center gap-3">
@@ -64,7 +64,7 @@ const Index = () => {
                 </div>
               </FadeIn>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 

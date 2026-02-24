@@ -52,7 +52,7 @@ export const HeroSlider = ({ onConsultation }: HeroSliderProps) => {
   const slide = slides[current];
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative mt-[50px] h-screen w-full overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
@@ -68,7 +68,7 @@ export const HeroSlider = ({ onConsultation }: HeroSliderProps) => {
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-10 flex h-full items-end pb-24 md:items-center md:pb-0">
+      <div className="relative z-10 flex h-auto items-end pb-24 md:items-center md:pb-0 mt-10">
         <div className="container-narrow w-full">
           <AnimatePresence mode="wait">
             <motion.div
