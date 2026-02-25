@@ -76,7 +76,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-heading font-semibold text-foreground">Email</h3>
-                      <p className="mt-1 text-sm text-muted-foreground">info@bridgeonedot.com</p>
+                      <p className="mt-1 text-sm text-muted-foreground">info@bridgeone.com</p>
                     </div>
                   </div>
                 </div>
