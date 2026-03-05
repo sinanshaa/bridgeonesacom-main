@@ -15,17 +15,50 @@ export const ConsultationDialog = ({ open, onOpenChange }: Props) => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+
+    const form = e.currentTarget;
+
+    const data = {
+      name: (form.elements.namedItem("consul-name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("consul-email") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("consul-phone") as HTMLInputElement).value,
+      message: (form.elements.namedItem("consul-msg") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const response = await fetch("http://localhost:5000/send-mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.text();
+
       setLoading(false);
       onOpenChange(false);
+
       toast({
         title: "Request Submitted!",
-        description: "We'll get back to you within 24 hours.",
+        description: "Your consultation request has been sent successfully.",
       });
-    }, 1000);
+
+      console.log(result);
+
+    } catch (error) {
+      setLoading(false);
+
+      toast({
+        title: "Error",
+        description: "Failed to send request. Please try again.",
+      });
+
+      console.error(error);
+    }
   };
 
   return (
@@ -37,23 +70,55 @@ export const ConsultationDialog = ({ open, onOpenChange }: Props) => {
             Fill in your details and our team will contact you shortly.
           </DialogDescription>
         </DialogHeader>
+
         <form onSubmit={handleSubmit} className="space-y-4">
+
           <div className="space-y-2">
             <Label htmlFor="consul-name">Full Name</Label>
-            <Input id="consul-name" placeholder="Your name" required maxLength={100} />
+            <Input
+              id="consul-name"
+              name="consul-name"
+              placeholder="Your name"
+              required
+              maxLength={100}
+            />
           </div>
+
           <div className="space-y-2">
             <Label htmlFor="consul-email">Email</Label>
-            <Input id="consul-email" type="email" placeholder="you@email.com" required maxLength={255} />
+            <Input
+              id="consul-email"
+              name="consul-email"
+              type="email"
+              placeholder="you@email.com"
+              required
+              maxLength={255}
+            />
           </div>
+
           <div className="space-y-2">
             <Label htmlFor="consul-phone">Phone</Label>
-            <Input id="consul-phone" type="tel" placeholder="+966 ..." required maxLength={20} />
+            <Input
+              id="consul-phone"
+              name="consul-phone"
+              type="tel"
+              placeholder="+966 ..."
+              required
+              maxLength={20}
+            />
           </div>
+
           <div className="space-y-2">
             <Label htmlFor="consul-msg">Message</Label>
-            <Textarea id="consul-msg" placeholder="Tell us about your business needs..." rows={3} maxLength={1000} />
+            <Textarea
+              id="consul-msg"
+              name="consul-msg"
+              placeholder="Tell us about your business needs..."
+              rows={3}
+              maxLength={1000}
+            />
           </div>
+
           <Button
             type="submit"
             disabled={loading}
@@ -61,6 +126,7 @@ export const ConsultationDialog = ({ open, onOpenChange }: Props) => {
           >
             {loading ? "Submitting..." : "Submit Request"}
           </Button>
+
         </form>
       </DialogContent>
     </Dialog>
