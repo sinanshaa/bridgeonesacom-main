@@ -29,7 +29,7 @@ export const ConsultationDialog = ({ open, onOpenChange }: Props) => {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/send-mail", {
+      const response = await fetch("http://216.198.79.1/send-mail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
