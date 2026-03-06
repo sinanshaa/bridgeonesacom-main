@@ -25,10 +25,10 @@ export const Footer = () => {
             </div>
             <div className="mt-6 flex gap-3">
               {[
-                { icon: Linkedin, href: "#" },
+                { icon: Linkedin, href: "https://www.linkedin.com/company/bridge-one-com-business-setup-saudi" },
                 { icon: Twitter, href: "#" },
-                { icon: Facebook, href: "#" },
-                { icon: Instagram, href: "#" },
+                { icon: Facebook, href: "https://www.facebook.com/share/18LH7rVZ6m/?mibextid=wwXIfr" },
+                { icon: Instagram, href: "https://www.instagram.com/bridgeonesa?igsh=MXdlNjRhMHJvZmhyeg%3D%3D&utm_source=qr" },
               ].map((social, i) => (
                 <a
                   key={i}

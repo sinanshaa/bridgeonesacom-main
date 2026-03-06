@@ -128,17 +128,17 @@ export const HeroSlider = ({ onConsultation }: HeroSliderProps) => {
 
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 z-20 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur-sm transition-all hover:bg-white/20 md:left-8"
+        className="absolute left-4 top-1/2 z-20 -translate-y-1/2 flex h-8 w-5 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur-sm transition-all hover:bg-white/20 md:left-8"
         aria-label="Previous slide"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={15} />
       </button>
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 z-20 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur-sm transition-all hover:bg-white/20 md:right-8"
+        className="absolute right-4 top-1/2 z-20 -translate-y-1/2 flex h-8 w-5 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur-sm transition-all hover:bg-white/20 md:right-8"
         aria-label="Next slide"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={15} />
       </button>
 
       <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-3">
