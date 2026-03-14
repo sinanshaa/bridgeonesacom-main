@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Prevent horizontal scroll and keep full screen */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Root container fix */
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 15%;
+
+    --primary: 214 70% 14%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 60% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 10% 45%;
+
+    --accent: 152 56% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 152 56% 40%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --navy: 214 70% 14%;
+    --navy-light: 220 60% 25%;
+    --green: 152 56% 40%;
+    --green-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 214 70% 6%;
+    --foreground: 210 20% 96%;
+    --card: 214 70% 10%;
+    --card-foreground: 210 20% 96%;
+    --popover: 214 70% 10%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 152 56% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 60% 25%;
+    --secondary-foreground: 210 20% 96%;
+    --muted: 214 50% 14%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 152 56% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 40% 16%;
+    --input: 214 40% 16%;
+    --ring: 152 56% 40%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-4 py-16 md:px-8 md:py-24 lg:px-16 lg:py-32;
+  }
+
+  .container-narrow {
+    @apply mx-auto max-w-6xl px-4 md:px-8;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl;
+  }
+
+  .green-glow {
+    box-shadow: 0 0 20px hsl(152 56% 40% / 0.3), 0 0 60px hsl(152 56% 40% / 0.1);
+  }
+
+  .tech-grid {
+    background-image:
+      linear-gradient(hsl(220 60% 35% / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(220 60% 35% / 0.06) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(214 70% 14%) 0%,
+      hsl(220 60% 25%) 50%,
+      hsl(214 70% 14%) 100%
+    );
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(0 0% 96%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(210 20% 80%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(210 20% 65%);
+}
+
+.backgroundImage {
+  background-image: url("../public/Backgroundimage.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+}
