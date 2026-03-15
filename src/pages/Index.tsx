@@ -70,10 +70,10 @@ const Index = () => {
       {/* About */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
             <FadeIn>
               <div>
-                <span className="inline-flex items-center rounded-full bg-accent/10 px-4 py-1 text-xs font-medium text-accent ring-1 ring-inset ring-accent/30">
+     <span className="mt-12 md:mt-14 inline-flex items-center rounded-full bg-accent/10 px-4 py-1 text-xs font-medium text-accent ring-1 ring-inset ring-accent/30">
   Who We Are
 </span>
                 <h2 className="mt-3 text-3xl font-heading font-bold text-primary md:text-5xl leading-tight">
@@ -155,7 +155,7 @@ const Index = () => {
               <p className="mt-4 text-white/50">Comprehensive business solutions tailored for the Saudi & GCC market</p>
             </div>
           </FadeIn>
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
               <FadeIn key={s.title} delay={i * 80}>
                 <div className="group relative h-full rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 transition-all duration-500 hover:border-accent/30 hover:bg-white/10 hover:-translate-y-2 hover:shadow-xl hover:shadow-accent/5">
@@ -209,7 +209,7 @@ const Index = () => {
     </FadeIn>
 
     {/* Steps */}
-    <div className="mt-16 grid gap-8 md:grid-cols-4">
+    <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
       {[
         {
           num: "01",
@@ -330,7 +330,7 @@ const Index = () => {
               <div className="mx-auto mt-4 h-1 w-28 rounded-full bg-gradient-to-r from-accent via-accent/60 to-transparent" />
             </div>
           </FadeIn>
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {testimonials.map((t, i) => (
               <FadeIn key={t.name} delay={i * 100}>
                 <Card className="group h-full border-border/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
@@ -369,7 +369,7 @@ const Index = () => {
             <p className="mx-auto mt-6 max-w-xl text-white/80 text-lg">
               Get expert guidance on company formation, licensing, and business setup in Saudi Arabia. Your first consultation is free.
             </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button
                 size="lg"
                 onClick={() => setDialogOpen(true)}

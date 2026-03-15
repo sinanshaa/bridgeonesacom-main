@@ -27,16 +27,16 @@ export const Navbar = () => {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-white py-3 shadow-sm">
-        <div className="flex items-center justify-between px-6">
+        <div className="flex items-center justify-between px-3 md:px-6">
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <img
               src={logo}
               alt="BridgeOne.Com"
-              className="h-10 md:h-12 w-auto"
+              className="h-7 md:h-12 w-auto"
             />
-            <span className="text-xl font-bold text-primary">
+            <span className="text-xs sm:text-sm md:text-xl font-bold text-primary">
               Bridge<span className="text-accent">One</span>.Com
             </span>
           </Link>
@@ -48,13 +48,13 @@ export const Navbar = () => {
             <div className="relative">
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="ml-3 px-6 py-2 border border-black rounded-full text-black hover:bg-gray-100 transition-colors duration-300"
+                className="ml-1 px-2 md:px-6 py-1.5 border border-black rounded-full text-xs text-black hover:bg-gray-100 transition-colors duration-300"
               >
                 {menuOpen ? "Close" : "Menu"}
               </button>
 
               {menuOpen && (
-                <div className="absolute right-0 mt-3 w-52 bg-white border rounded-xl shadow-lg">
+                <div className="absolute right-0 mt-3 w-48 md:w-52 bg-white border rounded-xl shadow-lg">
 
                   {navLinks.map((link) => (
                     <Link
@@ -74,7 +74,7 @@ export const Navbar = () => {
             {/* Get Consultation Button */}
             <button
               onClick={handleConsultationClick}
-              className="ml-3 px-6 py-2 border border-black rounded-full text-black hover:bg-gray-100 transition-colors duration-300"
+              className="ml-2 px-2 md:px-6 py-1.5 border border-black rounded-full text-xs text-black hover:bg-gray-100 transition-colors duration-300"
             >
               {location.pathname === "/contact"
                 ? "Close"

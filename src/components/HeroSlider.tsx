@@ -52,7 +52,7 @@ export const HeroSlider = ({ onConsultation }: HeroSliderProps) => {
   const slide = slides[current];
 
   return (
-    <section className="relative mt-[50px] h-screen w-full overflow-hidden">
+    <section className="relative mt-[50px] min-h-[90vh] md:h-screen w-full overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
@@ -68,7 +68,7 @@ export const HeroSlider = ({ onConsultation }: HeroSliderProps) => {
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-10 flex h-autoitems-end pb-24 md:items-center md:pb-0 mt-10">
+      <div className="relative z-10 flex h-auto items-end pb-24 md:items-center md:pb-0 mt-10">
         <div className="container-narrow w-full">
           <AnimatePresence mode="wait">
             <motion.div
@@ -82,7 +82,7 @@ export const HeroSlider = ({ onConsultation }: HeroSliderProps) => {
               <span className="mb-4 inline-block rounded-full border border-accent/40 bg-accent/10 px-5 py-1.5 text-sm font-medium text-accent backdrop-blur-sm">
                 {slide.tag}
               </span>
-              <h1 className="mt-4 font-heading text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
+              <h1 className="mt-4 font-heading text-3xl sm:text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
                 {slide.title}{" "}
                 <span className="text-accent">{slide.highlight}</span>
                 {slide.subtitle && (
@@ -92,10 +92,10 @@ export const HeroSlider = ({ onConsultation }: HeroSliderProps) => {
                   </>
                 )}
               </h1>
-              <p className="mt-6 max-w-xl text-lg text-white/60 md:text-xl">
+              <p className="mt-6 max-w-xl text-base sm:text-lg text-white/70 md:text-xl">
                 {slide.desc}
               </p>
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
                   asChild

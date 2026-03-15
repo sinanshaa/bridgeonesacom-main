@@ -7,8 +7,8 @@ export const Footer = () => {
     <footer className="bg-primary text-white relative overflow-hidden">
       <div className="absolute inset-0 tech-grid opacity-5" />
       
-      <div className="container-narrow relative py-20">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div className="container-narrow relative py-16 px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
@@ -95,7 +95,7 @@ export const Footer = () => {
       </div>
 
       <div className="border-t border-white/5">
-        <div className="container-narrow py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/30">
+        <div className="container-narrow py-6 px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/30 text-center md:text-left">
           <span>© {new Date().getFullYear()} BridgeOne.Com — All rights reserved.</span>
           <span>Trusted Business Partner in Saudi Arabia, UAE & India</span>
         </div>

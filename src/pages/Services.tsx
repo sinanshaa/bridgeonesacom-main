@@ -53,9 +53,9 @@ const Services = () => {
         <div className="absolute inset-0 tech-grid opacity-10" />
         <div className="container-narrow text-center relative">
           <FadeIn>
-            <h1 className="text-4xl font-heading font-bold md:text-5xl text-primary">Our Services</h1>
+            <h1 className="text-3xl md:text-5xl font-heading font-bold text-primary">Our Services</h1>
             <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-accent" />
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground text-lg">
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground text-base md:text-lg px-2">
               Comprehensive business solutions designed to simplify your journey in the Saudi market.
             </p>
           </FadeIn>
@@ -68,15 +68,15 @@ const Services = () => {
             <FadeIn key={service.title} delay={i * 60}>
               <Card className="overflow-hidden border-border/50 transition-all hover:shadow-xl hover:shadow-accent/5">
                 <CardContent className="p-0">
-                  <div className="grid md:grid-cols-5">
-                    <div className="flex flex-col justify-center bg-gradient-to-br from-primary/5 to-secondary/5 p-8 md:col-span-2">
+                  <div className="grid grid-cols-1 md:grid-cols-5">
+                    <div className="flex flex-col justify-center bg-gradient-to-br from-primary/5 to-secondary/5 p-6 md:p-8 md:col-span-2">
                       <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-accent/10 text-accent">
                         <service.icon size={28} />
                       </div>
                       <h3 className="text-xl font-heading font-bold text-foreground">{service.title}</h3>
                       <p className="mt-3 text-muted-foreground leading-relaxed">{service.desc}</p>
                     </div>
-                    <div className="flex flex-col justify-center p-8 md:col-span-3">
+                    <div className="flex flex-col justify-center p-6 md:p-8 md:col-span-3">
                       <h4 className="mb-4 font-heading font-semibold text-foreground">Key Benefits</h4>
                       <ul className="space-y-3">
                         {service.benefits.map((b) => (

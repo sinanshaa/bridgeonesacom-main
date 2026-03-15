@@ -90,7 +90,7 @@ return (
 
 {/* HERO */}
 
-<section className="bg-[#F6F9FF] py-20">
+<section className="bg-[#F6F9FF] py-16 px-4">
 
 <div className="max-w-7xl mx-auto text-center">
 
@@ -128,13 +128,13 @@ through every step of your business journey.
 
 <section className="py-10 bg-background">
 
-<div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
+<div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 px-4">
 
 {/* CONTACT INFORMATION */}
 
 <Card className="shadow-xl border-border/50 h-full">
 
-<CardContent className="p-10 md:p-12">
+<CardContent className="p-6 md:p-12">
 
 <h3 className="text-2xl font-heading font-bold">
 Contact Information
@@ -258,7 +258,7 @@ loading="lazy"
 
 <Card className="shadow-xl border-border/50 h-full">
 
-<CardContent className="p-10 md:p-12">
+<CardContent className="p-6 md:p-12">
 
 <h3 className="text-2xl font-heading font-bold">
 Send Us a Message
@@ -357,7 +357,7 @@ Reach out through the appropriate channel depending on your inquiry.
 
 </div>
 
-<div className="grid md:grid-cols-3 gap-8 mt-12">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12">
 
 {[
 {
